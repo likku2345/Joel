@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Anime Website for Joel!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-image: url('https://wallpapercave.com/wp/wp8500859.jpg'); /* Anime Background */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            margin: 50px auto;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        .characters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .character {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .character:hover {
+            transform: scale(1.1);
+        }
+        .message {
+            font-size: 1.5em;
+            margin-top: 20px;
+            min-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hey Joel!</h1>
+        <p>You are as cool as these anime legends! Click them for a surprise!</p>
+
+        <div class="characters">
+            <img src="https://wallpapercave.com/wp/wp8919139.jpg" class="character" onclick="showMessage('Rias')" alt="Rias">
+            <img src="https://wallpapercave.com/wp/wp8731192.jpg" class="character" onclick="showMessage('Sukuna')" alt="Sukuna">
+            <img src="https://wallpapercave.com/wp/wp4638609.jpg" class="character" onclick="showMessage('Stitch')" alt="Stitch">
+            <img src="https://wallpapercave.com/wp/wp9661321.jpg" class="character" onclick="showMessage('Gojo')" alt="Gojo">
+        </div>
+
+        <p class="message" id="message"></p>
+    </div>
+
+    <script>
+        function showMessage(character) {
+            const messages = {
+                'Rias': "Joel, you have the charm and confidence of Rias Gremory!",
+                'Sukuna': "Unstoppable like the King of Curses – that's you, Joel!",
+                'Stitch': "You're fun, chaotic, and full of love like Stitch!",
+                'Gojo': "Strongest? Coolest? Yep, you're just like Gojo!"
+            };
+            document.getElementById("message").innerText = messages[character];
+        }
+    </script>
+</body>
+</html>
